@@ -7,6 +7,7 @@ describe('Scenario 1', function () {
   var runs = [ 'btc', 'eth', 'bch' , 'dai', 'xrp', 'mana'];
 
   before(async () => {
+    await browser.maximizeWindow();
     await LoginPage.open();
     await LoginPage.login(logindata.username, logindata.password);
     console.log('User is able to Login');
