@@ -10,6 +10,7 @@ describe('Scenario 1', function () {
     await browser.maximizeWindow();
     await LoginPage.open();
     await LoginPage.login(logindata.username, logindata.password);
+    await expect(LoginPage.walletMessage).toExist();
     console.log('User is able to Login');
   });
   beforeEach(async () => {

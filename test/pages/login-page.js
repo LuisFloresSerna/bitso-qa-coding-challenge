@@ -13,7 +13,10 @@ class LoginPage{
     get btnLogin() {
         return $('//button[contains(text(),"Log in")]');
     }
- 
+    get walletMessage() {
+        return $('//h1[contains(text(),"Wallet")]');
+    }
+    
     async login(name,pwd) {
         await this.username.setValue(name)
         await this.password.setValue(pwd)
