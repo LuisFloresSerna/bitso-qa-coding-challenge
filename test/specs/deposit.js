@@ -8,11 +8,12 @@ describe('Scenario 1', function () {
 
   before(async () => {
     await LoginPage.open();
+    await LoginPage.btnCookies();
     await LoginPage.login(logindata.username, logindata.password);
     await expect(LoginPage.walletMessage).toExist();
     console.log('User is able to Login');
   });
-  beforeEach(async () => {
+  afterEach(async () => {
     await Wallet.visitWallet();
     console.log('User is able to Navigate to Wallet');
   });
@@ -25,7 +26,7 @@ describe('Scenario 1', function () {
       await Wallet.selectCurrency(run)
       console.log(`User is able to click on ${run}`);
       //Click on deposit
-      await Wallet.btnDeposit.click();
+      await Wallet.clickDeposit();
       console.log(`User is able to click on Deposit for ${run}`);
       //Validation
       await expect(Wallet.alertMessage).toExist();

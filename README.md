@@ -11,3 +11,5 @@ This repository is for Bitso's QA Coding Challenge
 
 ### See the report
 `npx allure open` 
+
+![](test/images/allure_reports.png)

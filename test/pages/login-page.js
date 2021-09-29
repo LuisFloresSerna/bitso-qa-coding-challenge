@@ -16,12 +16,18 @@ class LoginPage{
     get walletMessage() {
         return $('//h1[contains(text(),"Wallet")]');
     }
+    get cookies() {
+        return $('//button[@class="styles__StyledButton-sc-1mfj3x4-0 hKVypD styles__BannerButton-bsbe12-2 eQwsIa"]');
+    }
     
     async login(name,pwd) {
         await this.username.setValue(name)
         await this.password.setValue(pwd)
-        await this.btnLogin.click();
+        await this.btnLogin.click();    
     }    
+    async btnCookies() {
+        await this.cookies.click();
+    }  
 
 }
 

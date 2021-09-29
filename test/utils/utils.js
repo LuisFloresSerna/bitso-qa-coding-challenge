@@ -18,9 +18,11 @@ class Utils{
     async leapyear(year) {
         return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
       }
-
-
-
+    // async scrollClick(element) {
+    //     await element.waitForDisplayed();
+    //     await element.moveTo();
+    //     await element.click();
+    // }
 }
 
 export default new Utils();

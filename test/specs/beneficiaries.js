@@ -7,6 +7,7 @@ describe('Scenario 2', () => {
 
   before(async () => {
     await LoginPage.open();
+    await LoginPage.btnCookies();
     await LoginPage.login(logindata.username, logindata.password);
     await expect(LoginPage.walletMessage).toExist();
     console.log('User is able to Login');
